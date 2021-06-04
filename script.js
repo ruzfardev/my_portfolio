@@ -15,7 +15,7 @@ function calcBMI(){
     }
 }
 function inputFocus(){ 
-    height.insertAdjacentHTML('afterend', "<p>Enter your weight in kilogrmas and height in meters</p>");
+    height.insertAdjacentHTML('afterend', "<p>Enter your weight in kilograms and height in meters</p>");
     const removal = document.querySelector("p");
     removal.style.cssText = 'color: red; font-size: 12px';
     removal.insertAdjacentHTML('afterbegin', '<span> &#9888; </span>')
