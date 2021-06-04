@@ -29,7 +29,7 @@ body{
     font-size: 3.25em;
     position: relative;
     top: 2.5em;
-    border: 4px groove #fff;
+    border: 8px groove #fff;
     border-radius: 8px;
 }
 @media (max-width:600px){
