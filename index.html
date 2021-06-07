@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5e0c7c64b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My work</a></li>
+                </ul>
+            </nav>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+    </header>
+
+    <!--Introduction-->  
+    <section id="home" class="intro">
+        <h1 class="section__title section__title--intro ">
+            Hi, I am <strong>Farrukh Ruzmetov</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">
+            front-end dev
+        </p>
+        <img src="images/image.jpg" alt="" class="intro__img">
+    </section>
+
+    <!--My services-->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>HTML</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium suscipit nam animi eius omnis perferendis laborum voluptatum aperiam ut, dolorum molestiae pariatur rem eveniet earum maxime explicabo ipsa temporibus! Tenetur.</p>
+            </div>
+            <div class="service">
+                <h3>CSS</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laudantium doloribus, quisquam aspernatur quaerat ducimus illum amet corporis iste saepe vero consequatur officia quia aperiam, dicta itaque et possimus vitae.</p>
+            </div>
+            <div class="service">
+                <h3>JavaScript</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem nisi mollitia, deserunt, tempora id illo quam veniam facere quas qui expedita aliquid sunt quidem reprehenderit recusandae quia maiores sapiente atque?</p>
+            </div>
+        </div>
+        <a href="#work" class="btn">see my works</a>
+    </section>
+
+    <!--About me-->
+    <section id="about" class="about-me">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">Web Developer | Front-end Developer</p>
+        <div class="about-me__body">
+            <p>Currently, I am a student of Westminster International University in Tashkent.</p>
+            <p>I am studying in Business Information Systems course and now I am a level 4 student at WIUT.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero eveniet eius tempora eaque sapiente omnis pariatur dolorem eum sint!</p>
+        </div>
+        <img src="images/image1.png" alt="" class="about-me__img">
+    </section>
+
+    <!--My work-->
+
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My work</h2>
+        <p class="section__subtitle section__subtitle--work">
+            A selection of my range of work
+        </p>
+        <div class="portfolio">
+            <a href="https://farrukh-ruzmetov-bmi-calc.netlify.app/" class="portfolio__item">
+                <img src="images/BMI.png" alt="" class="portfolio__img" >
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/fast_food.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/sneakers.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/fast_food.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/sneakers.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/fast_food.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/sneakers.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <a href="#" class="portfolio__item">
+                <img src="images/fast_food.jpg" alt="" class="portfolio__img">
+            </a>
+        </div>
+    </section>
+
+    <!--Footer-->
+
+    <footer>
+        <ul class="social-list">
+            <li class="social-list__item"><a href="https://github.com/Farrukh-22" class="social-list__link"><i class="fab fa-github"></i></a></li>
+            <li class="social-list__item"><a href="https://www.facebook.com/farrukh.ruzmetov.9/" class="social-list__link"><i class="fab fa-facebook"></i></a></li>
+            <li class="social-list__item"><a href="https://t.me/Mr_Ruzmetov22" class="social-list__link"><i class="fab fa-telegram"></i></a></li>
+            <li class="social-list__item"><a href="https://www.instagram.com/ruzmetovfarrukh22/" class="social-list__link"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <span class="footer__copy">All rights reserved &copy; Copyright 2021</span>
+    </footer>
+    <script src="index.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
