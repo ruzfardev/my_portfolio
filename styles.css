@@ -412,6 +412,7 @@ footer{
 
 .social-list__link{
     font-size: 1.5em;
+    margin: 0 1.5em;
     color: var(--clr-ligth);
 }
 
