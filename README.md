@@ -1,2 +1,2 @@
-# farrukh_ruzmetov
-Ruz | Far |
+# BMI Calculator
+Ruz | Far | Dev
