@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0"></p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1"></p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
 
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <div class="footer">
+      <p>
+        &copy; Copyright by Farrukh Ruzmetov 2021 | <br />
+        Designed by Jonas Schmedtman
+      </p>
+      <div class="instruction" id="btn--inst">
+        <i class="fas fa-question"></i>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <button class="btn--close">&times;</button>
+      <h1>Instruction</h1>
+      <p>
+        This is a Pig Game 🎲. You roll a dice, if you get 1, you will lose your
+        current score ❌. Except 1, all your current scores are added. If you do
+        not get 1, you can hold your score any time 😊 and it is assigned to
+        your total score. Then the second player roll a dice. Game lasts until,
+        one player reaches 100 point 🎯.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
