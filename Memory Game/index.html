@@ -1,1 +1,125 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://kit.fontawesome.com/5e0c7c64b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="board">
+      <div class="heading">
+        <h1>Matching Game</h1>
+      </div>
+      <div class="game-info hidden">
+        <div>Time: <span class="timer">00:00</span></div>
+        <div>Moves:<span class="moves">0</span></div>
+      </div>
+      <div class="cards-container">
+        <div class="card" data-name="fcb">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__fcb" src="/img/fcb.png" alt="fcb" />
+        </div>
+        <div class="card" data-name="fcb">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__fcb" src="/img/fcb.png" alt="fcb" />
+        </div>
+        <div class="card" data-name="liv">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__liv" src="/img/liv.png" alt="liv" />
+        </div>
+        <div class="card" data-name="liv">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__liv" src="/img/liv.png" alt="liv" />
+        </div>
+        <div class="card" data-name="mc">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__mc" src="/img/mc.png" alt="mc" />
+        </div>
+        <div class="card" data-name="mc">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__mc" src="/img/mc.png" alt="mc" />
+        </div>
+        <div class="card" data-name="mu">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__mu" src="/img/mu.png" alt="mu" />
+        </div>
+        <div class="card" data-name="mu">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__mu" src="/img/mu.png" alt="mu" />
+        </div>
+        <div class="card" data-name="rmd">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__rmd" src="/img/rmd.png" alt="rmd" />
+        </div>
+        <div class="card" data-name="rmd">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__rmd" src="/img/rmd.png" alt="rmd" />
+        </div>
+        <div class="card" data-name="atm">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__atm" src="/img/atm.png" alt="atm" />
+        </div>
+        <div class="card" data-name="atm">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__atm" src="/img/atm.png" alt="atm" />
+        </div>
+        <div class="card" data-name="ar">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__ar" src="/img/ar.png" alt="ar" />
+        </div>
+        <div class="card" data-name="ar">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__ar" src="/img/ar.png" alt="ar" />
+        </div>
+        <div class="card" data-name="cfc">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__cfc" src="/img/cfc.png" alt="cfc" />
+        </div>
+        <div class="card" data-name="cfc">
+          <img class="card-front" src="img/ball.png" alt="front" />
+          <img class="card-back card-back__cfc" src="/img/cfc.png" alt="cfc" />
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          Designed by Farrukh Ruzmetov 2021 <br />
+          <a href="https://github.com/Farrukh-22/tic-tac-toe-game"
+            >Source of code</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="overlay-window visible">Click to start!</div>
+    <div class="window winning-window">
+      <h1>Congratulations 🎉🎉🎉</h1>
+      <h2>
+        It took you <span class="took-min">00</span> minutes
+        <span class="took-sec">36</span> seconds and
+        <span class="took-moves">12</span> moves to match all cards.😊😉😎
+      </h2>
+      <button class="btn">Play again 🔁</button>
+    </div>
+    <div class="window game-over-window">
+      <h1>Game Over!!! 😐😟</h1>
+      <button class="btn">Play again 🔁</button>
+    </div>
+  </body>
+</html>
