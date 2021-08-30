@@ -28,8 +28,7 @@ const timerFn = function () {
     tookMin.textContent = minute;
     tookMoves.textContent = movCounter;
     tookSec.textContent = sec;
-  }
-  if (counter > 60) {
+  } else if (counter > 60) {
     clearInterval(timerFn);
     gameOver.classList.add("visible");
   } else {
