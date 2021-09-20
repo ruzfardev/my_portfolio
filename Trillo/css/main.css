@@ -261,7 +261,7 @@ body {
 
 .search__input:focus {
   outline: none;
-  width: 100%;
+  width: 90%;
   background-color: var(--color-grey-light-3);
 }
 
