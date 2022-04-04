@@ -7,5 +7,7 @@ Here you can see my projects that I created during 2021-2022.
 - [Memory Game](https://memory-game-ruzfardev.netlify.app)
 - [Pig Game](https://pig-game-ruzfardev.netlify.app)
 - [Tic Toe Toe](https://tic-tac-toe-game-ruzfardev.netlify.app/)
+- [Natours](https://natours-exciting-tours.netlify.app)
+- [Trillo](https://trillo-app-ruzfardev.netlify.app/)
 - Weather-App-1
 - Weather-App-2
