@@ -1,7 +1,7 @@
 # Weather Application in React js
 
 This project is used [Openweather](openweather.com) API to get weather data.
-
+Icons by [Erikflower](https://github.com/erikflowers/weather-icons).
 # Application Dependicies
 
 - react
