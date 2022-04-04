@@ -10,5 +10,5 @@ Here you can see my projects that I created during 2021-2022.
 - [Natours](https://natours-exciting-tours.netlify.app)
 - [Trillo](https://trillo-app-ruzfardev.netlify.app/)
 - [BMI Calulator](https://farrukh-ruzmetov-bmi-calc.netlify.app/)
-- Weather-App-1
+- [Weather-App-1](https://my-portfolio-sigma-lovat.vercel.app/)
 - Weather-App-2
