@@ -1,0 +1,10 @@
+.current-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  letter-spacing: 2px;
+}
+.current-time > * {
+  float: right;
+  margin-right: 0.5rem;
+}
