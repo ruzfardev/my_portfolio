@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # My_portfolio_2021-2022
 
 Hello world 👋
