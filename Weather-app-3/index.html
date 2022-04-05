@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/weather-icons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <div>
+    <div class="container">
+      <header class="header">
+        <form class="search">
+          <input
+            type="text"
+            class="input search-input"
+            placeholder="Search by city name..."
+          />
+          <button class="search-button" type="submit">
+            <i class="fal fa-search"></i>
+          </button>
+        </form>
+        <div class="controls">
+          <div class="location btn">
+            <i class="far fa-location"></i>
+          </div>
+          <div class="refresh btn">
+            <i class="far fa-redo-alt"></i>
+          </div>
+        </div>
+        <div class="date-time">
+          <div class="date"></div>
+          <div class="current-time">
+            <div class="min"></div>
+            <div class="divider">:</div>
+            <div class="hour"></div>
+          </div>
+        </div>
+      </header>
+      <section class="main">
+        <h1 class="heading">Current weather</h1>
+        <div class="current-weather">
+        </div>
+        <h1 class="heading">Weekly weather</h1>
+        <div class="weekly-weather"></div>
+      </section>
+    </div>
+  </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

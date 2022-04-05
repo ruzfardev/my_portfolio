@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  --color-primary-1: #222222;
+  --color-primary-2: #c29254;
+  --font-color: #fefefe;
+  --font-color-2: #bebebe; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.5%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  position: relative;
+  background: url("../img/World Map.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Spartan', sans-serif;
+  padding: 5rem 0;
+  color: var(--font-color); }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      padding: 0; } }
+
+i {
+  color: var(--color-primary-2); }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  border-radius: 10px; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      height: 100%; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      width: 100%;
+      padding: 3rem;
+      border-radius: 0; } }
+  .container-loader {
+    font-size: 5rem;
+    padding: 3rem 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s ease-in;
+    backdrop-filter: blur(20px); }
+    .container-loader i {
+      animation: loader 6000ms infinite; }
+  .container-error {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.city {
+  flex: 0 0 100%;
+  font-size: 2.5rem;
+  font-weight: 400; }
+  @media only screen and (max-width: 37.5em) {
+    .city {
+      flex: 0 0 100%;
+      margin-top: 2rem;
+      order: 5; } }
+
+@media only screen and (max-width: 56.25em) {
+  .city {
+    font-size: 3.5rem; } }
+
+.search {
+  display: flex;
+  align-items: center;
+  flex: 0 0 35%; }
+  .search-input {
+    width: 85%;
+    height: 100%;
+    padding: 1rem 0.5rem;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--font-color-2);
+    color: var(--font-color-2);
+    background-color: transparent;
+    transition: width 0.5s ease;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300; }
+    .search-input:focus {
+      width: 95%;
+      outline: none;
+      box-shadow: 5px -5px 10px #171717, -5px 5px 10px #2d2d2d; }
+  .search-button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin-left: -2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      flex: 0 0 60%; }
+      .search-input {
+        border-radius: 5px; }
+      .search-button {
+        margin-right: 2rem; } }
+
+::placeholder {
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--font-color); }
+
+.controls {
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid var(--font-color-2);
+  box-shadow: 5px -5px 10px #171717, -5px 5px 10px #2d2d2d; }
+  .controls * {
+    font-size: 2.2rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40%;
+    cursor: pointer; }
+    @media only screen and (max-width: 56.25em) {
+      .controls * {
+        font-size: 1.8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .controls {
+      flex: 0 0 15%;
+      border-radius: 5px; } }
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  font-size: 1.5rem; }
+
+.current-time {
+  width: 20rem;
+  justify-content: space-between; }
+  .current-time > * {
+    float: right;
+    margin-right: 0.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .current-time {
+      width: 12rem; } }
+
+.current-weather {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-wrap: wrap; }
+  .current-weather__data {
+    text-align: right;
+    flex: 0 1 30%;
+    justify-self: end; }
+  .current-weather .icon {
+    font-size: 12rem;
+    flex: 0 0 30%; }
+  @media only screen and (max-width: 37.5em) {
+    .current-weather {
+      flex-direction: column; } }
+
+.left,
+.right {
+  flex: 0 0 50%; }
+
+.left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 3px solid var(--color-primary-2);
+  padding-right: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .left {
+      padding: 0;
+      padding-bottom: 3rem;
+      border: none;
+      border-bottom: 2px solid var(--color-primary-2); } }
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .right {
+      padding: 3rem 0;
+      border: none;
+      border-bottom: 2px solid var(--color-primary-2);
+      margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2.5rem; } }
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column; }
+  .box * {
+    margin-bottom: 1rem; }
+  .box i {
+    font-size: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .box i {
+        font-size: 3rem; } }
+
+.description {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1.5px; }
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: 500; }
+  .temp-current {
+    text-align: center;
+    font-size: 10rem;
+    font-weight: 300; }
+  @media only screen and (max-width: 37.5em) {
+    .temp {
+      font-size: 3.5rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .sunrise {
+    order: 2; } }
+
+.label {
+  font-size: 1.4rem;
+  font-weight: 300; }
+  @media only screen and (max-width: 37.5em) {
+    .label {
+      font-size: 2rem; } }
+
+.weekly-weather {
+  display: flex;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden; }
+  .weekly-weather::-webkit-scrollbar {
+    display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .weekly-weather {
+      padding: 3rem 0; }
+      .weekly-weather *:not(:last-child) {
+        margin-left: 2rem; } }
+
+.weekly-box {
+  flex: 0 1 12%;
+  padding: 2rem 0;
+  border-radius: 5px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: -5px -5px 10px #171717, 5px 5px 10px #2d2d2d; }
+  .weekly-box i {
+    font-size: 5rem; }
+  .weekly-box > *:not(:last-child) {
+    margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .weekly-box {
+      flex: 0 0 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
+
+.weekly-weather__icon {
+  font-size: 5rem; }
+
+.weekly-data {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly; }
+  .weekly-data * {
+    margin: 0; }
+  .weekly-data i {
+    font-size: 1.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .weekly-data {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 1.5rem;
+      padding-right: 2rem; }
+      .weekly-data i {
+        font-size: 1.8rem;
+        margin-left: 3rem; }
+      .weekly-data span {
+        font-size: 2rem; } }
+
+.week-data {
+  justify-content: space-between; }
+  .week-data i {
+    font-size: 2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .week-data {
+      margin: 0;
+      margin-bottom: 0;
+      margin-left: 4rem;
+      margin-top: 3rem;
+      flex: 0 1 50%; } }
+
+@media only screen and (max-width: 37.5em) {
+  .week-time {
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    justify-content: flex-start;
+    grid-column: 1 / 3; } }
+
+.fade {
+  animation: fadeInUp 2s ease; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-top: 2.5rem; }
+
+.time {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+@keyframes loader {
+  100% {
+    transform: rotate(720deg); } }
+
+.legal-text {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: var(--font-color); }
+
+.owner {
+  color: var(--color-primary-2); }
