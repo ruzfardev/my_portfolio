@@ -1,0 +1,30 @@
+.list-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.3fr 5fr 2fr;
+  border-bottom: 1px solid #333;
+}
+.play-button {
+  display: flex;
+  border-radius: 50%;
+  border: 1px solid #333;
+  padding: 7px 9px;
+  margin-right: 10px;
+}
+.btn-play {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #444;
+  cursor: pointer;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+.duration {
+  margin-right: 15px;
+  text-align: right;
+}

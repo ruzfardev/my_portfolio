@@ -1,0 +1,10 @@
+.music-list {
+  padding: 5px 15px;
+  flex: 0 0 60%;
+  overflow-y: scroll;
+  height: 450px;
+}
+
+.music-list::-webkit-scrollbar {
+  display: none;
+}

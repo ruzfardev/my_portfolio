@@ -1,0 +1,39 @@
+.player-controls {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.disc {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  margin: 30px 0;
+  /* background: rgb(0, 0, 0); */
+  background: linear-gradient(171deg, #e5edfa 0%, rgb(228, 220, 220) 47%);
+}
+
+.controls {
+  width: 450px;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.controls-button {
+  width: 450px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.player-controls {
+  width: 100%;
+}
+
+.range {
+  width: 100%;
+}
