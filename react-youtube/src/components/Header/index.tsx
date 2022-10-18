@@ -10,12 +10,11 @@ import { Search, SearchIconWrapper, StyledInputBase } from './style';
 import { MaterialUISwitch } from '../Switch/style';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
-import { Container } from '@mui/system';
 export default function SearchAppBar() {
   const { toggleTheme, theme } = useContext(ThemeContext);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static'>
+      <AppBar position='fixed'>
         <Toolbar sx={{ display: 'flex', gap: '0.5rem' }}>
           <IconButton size='large' edge='start' color='inherit' sx={{ mr: 2 }}>
             <YouTubeIcon

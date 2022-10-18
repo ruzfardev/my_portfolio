@@ -1,7 +1,9 @@
 import {
+  Box,
   CircularProgress,
   createTheme,
   Grid,
+  LinearProgress,
   PaletteMode,
   ThemeProvider,
 } from '@mui/material';
@@ -9,11 +11,11 @@ import { Container } from '@mui/system';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import SearchAppBar from './components/Header';
-import VideoItem from './components/Video';
-import { ThemeContext } from './context/ThemeContext';
-import { getVideosRequest } from './reducers/videos';
-import { getDesignTokens } from './theme/theme';
+import Header from './Header';
+import VideoItem from './Video';
+import { ThemeContext } from '../context/ThemeContext';
+import { getVideosRequest } from '../reducers/videos';
+import { getDesignTokens } from '../theme/theme';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,24 +39,38 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme: mode, toggleTheme: setMode }}>
       <ThemeProvider theme={theme}>
-        <div className='App'>
-          <SearchAppBar />
-          <Container maxWidth='xl'>
-            <h1>React Youtube</h1>
+        <Box
+          sx={{
+            backgroundColor: 'background.default',
+          }}
+        >
+          <Header />
+          <Container
+            maxWidth='xl'
+            sx={{
+              paddingTop: '6rem',
+            }}
+          >
             {error && <h1>{error}</h1>}
             {loading ? (
-              <CircularProgress />
+              <Box
+                sx={{
+                  width: '100%',
+                }}
+              >
+                <LinearProgress color='error' />
+              </Box>
             ) : (
               <Grid container columnGap={2} rowGap={2}>
                 {videos.map((video: any) => (
-                  <Grid width={350} maxHeight={200} item>
+                  <Grid width={350} item key={video.id}>
                     <VideoItem key={video.id} video={video} />
                   </Grid>
                 ))}
               </Grid>
             )}
           </Container>
-        </div>
+        </Box>
       </ThemeProvider>
     </ThemeContext.Provider>
   );
