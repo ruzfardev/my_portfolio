@@ -6,5 +6,6 @@ export const axiosInstance = axios.create({
     part: 'snippet',
     maxResults: 12,
     key: APIKEY,
+    regionCode: 'UZ',
   },
 });

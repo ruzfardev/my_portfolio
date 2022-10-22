@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,8 +10,16 @@ import { Search, SearchIconWrapper, StyledInputBase } from './style';
 import { MaterialUISwitch } from '../Switch/style';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
+import { getSearchRequest } from '../../reducers/videos';
 export default function SearchAppBar() {
+  const dispatch = useDispatch();
   const { toggleTheme, theme } = useContext(ThemeContext);
+  const [term, setTerm] = useState('');
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    dispatch(getSearchRequest(term));
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='fixed'>
@@ -44,10 +52,15 @@ export default function SearchAppBar() {
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase
-                placeholder='Search…'
-                inputProps={{ 'aria-label': 'search' }}
-              />
+              <form onSubmit={handleSubmit}>
+                <StyledInputBase
+                  placeholder='Search…'
+                  inputProps={{ 'aria-label': 'search' }}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setTerm(e.target.value)
+                  }
+                />
+              </form>
             </Search>
             <MaterialUISwitch
               onChange={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}

@@ -1,10 +1,13 @@
-import { takeEvery, call, put } from 'redux-saga/effects';
-import { getVideosSuccess } from '../reducers/videos';
+import { takeEvery, take, call, put, takeLatest } from 'redux-saga/effects';
 import fetchVideos from '../api';
 import { AxiosResponse } from 'axios';
-function* workerSaga() {
-  console.log('workerSaga');
+type Params = {
+  type: string;
+  term: string;
+};
+function* workerSaga(action: Params) {
   try {
+    console.log(action);
     const payload: AxiosResponse = yield call(fetchVideos);
     yield put({ type: 'defaultVideosState/getVideosSuccess', payload });
   } catch (e) {
@@ -12,7 +15,7 @@ function* workerSaga() {
   }
 }
 function* videosSaga() {
-  yield takeEvery('defaultVideosState/getVideosRequest', workerSaga);
+  yield takeLatest('defaultVideosState/getVideosRequest', workerSaga);
 }
 
 export default videosSaga;

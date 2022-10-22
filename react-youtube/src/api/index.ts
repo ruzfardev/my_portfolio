@@ -10,4 +10,14 @@ const fetchVideos = async () => {
   return response.data;
 };
 
+export const searchVideos = async (term: string) => {
+  const res = await axiosInstance.get('/search', {
+    params: {
+      q: term,
+      maxResults: 28,
+    },
+  });
+  return res.data;
+};
+
 export default fetchVideos;
