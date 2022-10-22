@@ -10,6 +10,7 @@ import '@fontsource/roboto/700.css';
 import { store } from './store';
 import App from './components/App';
 import Player from './components/Player';
+import Main from './components/Main';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -18,8 +19,10 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<App />} />
-          <Route path='/:videoId' element={<Player />} />
+          <Route element={<Main />}>
+            <Route path='/' element={<App />} />
+            <Route path='/:videoId' element={<Player />} />
+          </Route>
           {/* <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} /> */}

@@ -12,8 +12,10 @@ import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
 import { useDispatch } from 'react-redux';
 import { getSearchRequest } from '../../reducers/videos';
+import { useNavigate } from 'react-router-dom';
 export default function SearchAppBar() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { toggleTheme, theme } = useContext(ThemeContext);
   const [term, setTerm] = useState('');
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,7 +26,13 @@ export default function SearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='fixed'>
         <Toolbar sx={{ display: 'flex', gap: '0.5rem' }}>
-          <IconButton size='large' edge='start' color='inherit' sx={{ mr: 2 }}>
+          <IconButton
+            size='large'
+            edge='start'
+            onClick={() => navigate('/')}
+            color='inherit'
+            sx={{ mr: 2 }}
+          >
             <YouTubeIcon
               color={theme === 'dark' ? 'error' : 'inherit'}
               fontSize='large'
