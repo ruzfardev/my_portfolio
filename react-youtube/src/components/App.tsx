@@ -3,7 +3,7 @@ import { Container } from '@mui/system';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import VideoItem from './Video';
+import VideoItem from './Video/VideoItem';
 import { getVideosRequest, setselectedVideo } from '../reducers/videos';
 import { useNavigate } from 'react-router-dom';
 

@@ -9,8 +9,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { store } from './store';
 import App from './components/App';
-import Player from './components/Player';
 import Main from './components/Main';
+import VideoDetail from './components/Video';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -21,7 +21,7 @@ root.render(
         <Routes>
           <Route element={<Main />}>
             <Route path='/' element={<App />} />
-            <Route path='/:videoId' element={<Player />} />
+            <Route path='/:videoId' element={<VideoDetail />} />
           </Route>
           {/* <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

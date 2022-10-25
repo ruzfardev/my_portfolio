@@ -1,14 +1,14 @@
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 const Player = () => {
   const { videoId } = useParams();
   return (
-    <Container
-      maxWidth='lg'
+    <Box
       sx={{
-        borderRaduis: '1rem',
         height: '80vh',
+        width: '95%',
+        margin: '0 auto',
       }}
     >
       <iframe
@@ -19,7 +19,7 @@ const Player = () => {
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
         allowFullScreen
       ></iframe>
-    </Container>
+    </Box>
   );
 };
 

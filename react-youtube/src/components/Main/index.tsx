@@ -21,13 +21,7 @@ const Main = () => {
     <>
       <ThemeContext.Provider value={{ theme: mode, toggleTheme: setMode }}>
         <ThemeProvider theme={theme}>
-          <Box
-            sx={
-              {
-                //   backgroundColor: 'background.default',
-              }
-            }
-          >
+          <Box>
             <Header />
             <Outlet />
           </Box>
