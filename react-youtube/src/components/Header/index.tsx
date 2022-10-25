@@ -21,6 +21,8 @@ export default function SearchAppBar() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(getSearchRequest(term));
+    navigate('/', { replace: true });
+    setTerm('');
   };
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -62,6 +64,7 @@ export default function SearchAppBar() {
               </SearchIconWrapper>
               <form onSubmit={handleSubmit}>
                 <StyledInputBase
+                  value={term}
                   placeholder='Search…'
                   inputProps={{ 'aria-label': 'search' }}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

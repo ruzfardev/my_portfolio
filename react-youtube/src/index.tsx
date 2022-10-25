@@ -23,9 +23,6 @@ root.render(
             <Route path='/' element={<App />} />
             <Route path='/:videoId' element={<VideoDetail />} />
           </Route>
-          {/* <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </Provider>
