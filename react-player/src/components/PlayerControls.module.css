@@ -11,8 +11,18 @@
   border-radius: 50%;
   border: 1px solid #333;
   margin: 30px 0;
-  /* background: rgb(0, 0, 0); */
-  background: linear-gradient(171deg, #e5edfa 0%, rgb(228, 220, 220) 47%);
+  /* background: linear-gradient(171deg, #e5edfa 0%, rgb(228, 220, 220) 47%); */
+  animation: rotate 10s linear infinite;
+}
+
+.disc .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  box-shadow:  0 0 10px #333;
 }
 
 .controls {
@@ -36,4 +46,14 @@
 
 .range {
   width: 100%;
+}
+
+/* Keyframe animation that rotate div 360 deg infinite loop */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
