@@ -50,11 +50,17 @@ function Player() {
     }
   };
   const handleNext = () => {
-    const nextMusic = music.find((m) => m.id === selectedMusic.id + 1);
+    const currentMusicIndex = music.findIndex(
+      (music) => music.id === selectedMusic.id
+    );
+    const nextMusic = music[currentMusicIndex + 1];
     dispatch(setSelectedMusic(nextMusic || music[0]));
   };
   const handlePrev = () => {
-    const prevMusic = music.find((m) => m.id === selectedMusic.id - 1);
+    const currentMusicIndex = music.findIndex(
+      (music) => music.id === selectedMusic.id
+    );
+    const prevMusic = music[currentMusicIndex - 1];
     dispatch(setSelectedMusic(prevMusic || music[music.length - 1]));
   };
   return (
